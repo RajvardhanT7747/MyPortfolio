@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Mail, Phone, MapPin, Linkedin, Github, ExternalLink } from 'lucide-react';
+import { Mail, Phone, MapPin, Github } from 'lucide-react';
 
 const Contact = ({ personal, social }) => {
   const ref = useRef(null);
