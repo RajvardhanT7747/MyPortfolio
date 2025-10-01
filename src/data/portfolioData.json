@@ -1,0 +1,152 @@
+{
+    "personal": {
+      "name": "Rajvardhan Tipugade",
+      "title": "Backend Developer & Problem Solver",
+      "tagline": "Crafting scalable systems, one optimized query at a time",
+      "email": "rajvardhantipugade559@gmail.com",
+      "phone": "+91 8421902911",
+      "location": "Pune, Maharashtra",
+      "avatar": "/profile.jpg"
+    },
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/rajvardhan-tipugade-346309286/",
+      "github": "https://github.com/RajvardhanT7747",
+      "leetcode": "https://leetcode.com/u/Rajvardhan_Tipugade_07/",
+      "gfg": "https://www.geeksforgeeks.org/user/rajvardhantc5cl/"
+    },
+    "about": {
+      "summary": "I'm a third-year Information Technology student at PICT Pune with a 9.02 CGPA and a relentless drive to solve complex problems. With 500+ competitive programming challenges under my belt and hands-on experience building production-grade backend systems, I thrive at the intersection of algorithms and architecture.",
+      "experience": "During my internship at Bluestock, I engineered a cryptocurrency alert system that monitors 50+ assets in real-time, achieving sub-200ms WebSocket delivery and cutting database query latency by 30%. Whether it's optimizing MongoDB pipelines, designing scalable APIs, or leading technical events at Pulzion, I bring both code quality and collaborative leadership to every project.",
+      "current": "I am a third-year student currently exploring Java Full Stack. Always ready for the next technical challenge."
+    },
+    "education": [
+      {
+        "institution": "Pune Institute of Computer Technology",
+        "degree": "B.E. in Information Technology",
+        "location": "Pune, Maharashtra",
+        "duration": "Dec 2023 – 2027",
+        "cgpa": "9.02 / 10",
+        "highlights": ["First Year CGPA: 9.75"]
+      },
+      {
+        "institution": "The New College, Kolhapur",
+        "degree": "12th Standard",
+        "location": "Kolhapur, Maharashtra",
+        "duration": "2023",
+        "percentage": "81.33%"
+      }
+    ],
+    "skills": {
+      "Programming Languages": ["Java", "C++", "Python", "JavaScript", "C"],
+      "Backend Engineering": ["Node.js", "Express.js", "WebSockets", "MongoDB", "MySQL", "RESTful APIs"],
+      "Frontend & Full-Stack": ["React.js", "Tailwind CSS", "Bootstrap", "EJS", "Responsive Design"],
+      "Tools & DevOps": ["Git/GitHub", "Linux", "Passport.js", "Performance Optimization"],
+      "Problem Solving": ["500+ DSA Problems", "LeetCode", "Codeforces", "GeeksforGeeks"]
+    },
+    "experience": [
+      {
+        "role": "SDE Intern",
+        "company": "Bluestock",
+        "location": "Remote",
+        "duration": "Jan 2025 – Feb 2025",
+        "description": "Built a production-ready cryptocurrency monitoring system from the ground up. Architected the backend with Node.js and Express, implementing WebSocket connections for instant price alerts across 50+ digital assets.",
+        "achievements": [
+          "Reduced MongoDB query latency by 30% through strategic indexing",
+          "Achieved sub-200ms WebSocket delivery for real-time alerts",
+          "Monitored 50+ cryptocurrency assets simultaneously"
+        ],
+        "tech": ["Node.js", "Express", "MongoDB", "WebSockets"]
+      }
+    ],
+    "projects": [
+      {
+        "name": "Cryptocurrency Alert System",
+        "description": "High-performance real-time tracking platform with custom price alerts. Leverages WebSockets for instant notifications and optimized MongoDB queries.",
+        "impact": "30% faster response times",
+        "tech": ["Node.js", "Express", "MongoDB", "WebSockets"],
+        "highlights": [
+          "Real-time tracker with user-defined price alerts",
+          "Reduced response latency by 30% through backend optimization"
+        ]
+      },
+      {
+        "name": "CCA Attendance & Credit System",
+        "description": "Automated student credit management system with admin dashboard and real-time updates.",
+        "impact": "Manages 200+ students",
+        "tech": ["Node.js", "Express", "MongoDB", "Bootstrap"],
+        "highlights": [
+          "Auto-calculates student credits based on event hours",
+          "Admin-side logging with real-time updates"
+        ]
+      },
+      {
+        "name": "HeavenQuest – Room Booking Platform",
+        "description": "Full-stack rental property marketplace with secure authentication and session management.",
+        "impact": "Complete booking solution",
+        "tech": ["Node.js", "Express", "MongoDB", "EJS", "Passport.js"],
+        "highlights": [
+          "Users can list, search, and book rental properties",
+          "Secure authentication with session-based bookings"
+        ]
+      }
+    ],
+    "achievements": [
+      {
+        "title": "Mastercard CFC 2.0 Finalist",
+        "description": "Upcoming Summer 2026 Intern at Mastercard",
+        "icon": "award",
+        "color": "from-yellow-400 to-orange-500"
+      },
+      {
+        "title": "500+ DSA Problems Solved",
+        "description": "LeetCode, Codeforces, GeeksforGeeks",
+        "icon": "code",
+        "color": "from-green-400 to-cyan-500"
+      },
+      {
+        "title": "MHT-CET Top 0.77%",
+        "description": "Rank 2541 / 330,000 students",
+        "icon": "trophy",
+        "color": "from-blue-400 to-purple-500"
+      },
+      {
+        "title": "9.75 CGPA",
+        "description": "First Year Academic Excellence",
+        "icon": "graduation",
+        "color": "from-pink-400 to-red-500"
+      }
+    ],
+    "leadership": [
+      {
+        "role": "Event Lead",
+        "organization": "DataQuest, Pulzion 2025",
+        "description": "Oversaw planning, question design, and execution"
+      },
+      {
+        "role": "Backend Lead",
+        "organization": "Pulzion 2025",
+        "description": "Managed submission systems for multiple coding events"
+      },
+      {
+        "role": "Event Sub-Lead",
+        "organization": "Football, Pulzion 2024",
+        "description": "Coordinated logistics, scheduling, and execution"
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Stanford Machine Learning Specialization",
+        "issuer": "Coursera",
+        "topics": ["Supervised ML", "Advanced Learning", "Unsupervised ML"]
+      }
+    ],
+    "highlights": {
+      "tags": ["Java Expert", "500+ DSA Problems", "Real-time Systems", "Backend Architecture"],
+      "stats": {
+        "problemsSolved": "500+",
+        "cgpa": "9.02",
+        "projectsCompleted": "10+",
+        "codeCommits": "1000+"
+      }
+    }
+  } 
