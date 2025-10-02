@@ -15,9 +15,9 @@
       "gfg": "https://www.geeksforgeeks.org/user/rajvardhantc5cl/"
     },
     "about": {
-      "summary": "I'm a third-year Information Technology student at PICT Pune with a 9.02 CGPA and a relentless drive to solve complex problems. With 500+ competitive programming challenges under my belt and hands-on experience building production-grade backend systems, I thrive at the intersection of algorithms and architecture.",
-      "experience": "During my internship at Bluestock, I engineered a cryptocurrency alert system that monitors 50+ assets in real-time, achieving sub-200ms WebSocket delivery and cutting database query latency by 30%. Whether it's optimizing MongoDB pipelines, designing scalable APIs, or leading technical events at Pulzion, I bring both code quality and collaborative leadership to every project.",
-      "current": "I am a third-year student currently exploring Java Full Stack. Always ready for the next technical challenge."
+      "summary": "I'm a passionate Information Technology student at PICT Pune with a 9.02 CGPA, driven by a love for solving complex problems through code. With 500+ competitive programming challenges solved and hands-on experience building production-grade systems, I excel at transforming algorithmic thinking into scalable solutions.",
+      "experience": "My recent internship at Bluestock allowed me to engineer a real-time cryptocurrency monitoring system, achieving sub-200ms WebSocket delivery and optimizing database performance by 30%. I combine technical expertise with leadership experience, having led backend development for multiple events at Pulzion while maintaining high code quality standards.",
+      "current": "Currently exploring Java Full Stack development and always eager to tackle the next technical challenge that pushes the boundaries of what's possible."
     },
     "education": [
       {
