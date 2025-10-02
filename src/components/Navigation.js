@@ -26,11 +26,27 @@ const Navigation = ({ data }) => {
   ];
 
   const scrollToSection = (href) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    // Close mobile menu first
     setIsMobileMenuOpen(false);
+    
+    // Add a small delay to ensure menu closes before scrolling
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      if (element) {
+        // Get the navbar height to account for fixed positioning
+        const navbar = document.querySelector('nav');
+        const navbarHeight = navbar ? navbar.offsetHeight : 80;
+        
+        // Calculate position with offset for fixed navbar
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - navbarHeight - 20;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }, 300); // Wait for menu animation to complete
   };
 
   return (
@@ -44,19 +60,20 @@ const Navigation = ({ data }) => {
           : 'bg-transparent'
       }`}
     >
-      <div className="container-max">
-        <div className="flex items-center justify-between py-4">
+      <div className="container-max px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between py-3 sm:py-4">
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold gradient-text cursor-pointer"
+            whileTap={{ scale: 0.95 }}
+            className="text-xl sm:text-2xl font-bold gradient-text cursor-pointer select-none"
             onClick={() => scrollToSection('#home')}
           >
             RT
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navItems.map((item, index) => (
               <motion.button
                 key={item.name}
@@ -64,7 +81,7 @@ const Navigation = ({ data }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 onClick={() => scrollToSection(item.href)}
-                className="text-text-secondary hover:text-accent-cyan transition-colors duration-300 font-medium"
+                className="text-text-secondary hover:text-accent-cyan transition-colors duration-300 font-medium text-sm lg:text-base px-2 py-1 rounded-md hover:bg-dark-card/50"
               >
                 {item.name}
               </motion.button>
@@ -72,12 +89,15 @@ const Navigation = ({ data }) => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-text-primary"
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="md:hidden text-text-primary p-2 rounded-md hover:bg-dark-card/50 transition-colors duration-300"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle mobile menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          </motion.button>
         </div>
 
         {/* Mobile Navigation */}
@@ -87,18 +107,24 @@ const Navigation = ({ data }) => {
             opacity: isMobileMenuOpen ? 1 : 0,
             height: isMobileMenuOpen ? 'auto' : 0,
           }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.3, ease: 'easeInOut' }}
           className="md:hidden overflow-hidden"
         >
-          <div className="py-4 space-y-4 border-t border-dark-border">
-            {navItems.map((item) => (
-              <button
+          <div className="py-4 space-y-2 border-t border-dark-border/50 bg-dark-bg/25 backdrop-blur-md rounded-b-lg shadow-lg shadow-dark-bg/50">
+            {navItems.map((item, index) => (
+              <motion.button
                 key={item.name}
+                initial={{ opacity: 0, x: -20 }}
+                animate={isMobileMenuOpen ? { 
+                  opacity: 1, 
+                  x: 0,
+                  transition: { delay: index * 0.1 }
+                } : { opacity: 0, x: -20 }}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left text-text-secondary hover:text-accent-cyan transition-colors duration-300 py-2"
+                className="block w-full text-left text-text-secondary hover:text-accent-cyan transition-colors duration-300 py-3 px-4 rounded-md hover:bg-dark-card/30 font-medium"
               >
                 {item.name}
-              </button>
+              </motion.button>
             ))}
           </div>
         </motion.div>

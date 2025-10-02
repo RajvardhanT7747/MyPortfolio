@@ -52,13 +52,13 @@ const About = ({ data }) => {
             variants={itemVariants}
             className="card max-w-5xl mx-auto"
           >
-            <div className="flex flex-col lg:flex-row items-center gap-8">
+            <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8">
               {/* Profile Image */}
               <motion.div
                 variants={itemVariants}
                 className="flex-shrink-0 mx-auto lg:mx-0"
               >
-                <div className="relative w-64 h-64">
+                <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64">
                   {/* Glow Effect */}
                   <motion.div
                     animate={{
@@ -76,6 +76,7 @@ const About = ({ data }) => {
                   {/* Profile Image */}
                   <motion.div
                     whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.98 }}
                     className="relative w-full h-full rounded-full border-4 border-dark-border overflow-hidden"
                   >
                     <img
@@ -89,7 +90,7 @@ const About = ({ data }) => {
                       }}
                     />
                     {/* Fallback Avatar */}
-                    <div className="hidden w-full h-full bg-gradient-to-br from-accent-cyan to-accent-purple items-center justify-center text-white text-4xl font-bold">
+                    <div className="hidden w-full h-full bg-gradient-to-br from-accent-cyan to-accent-purple items-center justify-center text-white text-2xl sm:text-3xl md:text-4xl font-bold">
                       RT
                     </div>
                   </motion.div>
@@ -99,25 +100,25 @@ const About = ({ data }) => {
               {/* About Text */}
               <motion.div
                 variants={itemVariants}
-                className="flex-1 space-y-6"
+                className="flex-1 space-y-4 sm:space-y-6 text-center lg:text-left"
               >
                 <motion.p
                   variants={itemVariants}
-                  className="text-lg text-text-secondary leading-relaxed"
+                  className="text-base sm:text-lg text-text-secondary leading-relaxed"
                 >
                   {data.summary}
                 </motion.p>
 
                 <motion.p
                   variants={itemVariants}
-                  className="text-lg text-text-secondary leading-relaxed"
+                  className="text-base sm:text-lg text-text-secondary leading-relaxed"
                 >
                   {data.experience}
                 </motion.p>
 
                 <motion.p
                   variants={itemVariants}
-                  className="text-lg text-text-secondary leading-relaxed"
+                  className="text-base sm:text-lg text-text-secondary leading-relaxed"
                 >
                   {data.current}
                 </motion.p>

@@ -82,12 +82,12 @@ const Hero = ({ data, highlights }) => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="text-center z-10 max-w-4xl mx-auto px-4"
+        className="text-center z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"
       >
         {/* Name */}
         <motion.h1
           variants={itemVariants}
-          className="text-5xl md:text-7xl font-bold mb-4"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 leading-tight"
           style={{ color: '#22d3ee', textShadow: '0 0 20px rgba(34, 211, 238, 0.8)' }}
         >
           {data.name}
@@ -96,14 +96,14 @@ const Hero = ({ data, highlights }) => {
         {/* Mastercard Internship */}
         <motion.div
           variants={itemVariants}
-          className="flex items-center justify-center gap-3 mb-6"
+          className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-6"
         >
           <img 
             src="/mastercard_logo1.jpeg" 
             alt="Mastercard Logo" 
-            className="w-8 h-8 object-contain"
+            className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
           />
-          <span className="text-lg md:text-xl text-text-secondary font-medium">
+          <span className="text-base sm:text-lg md:text-xl text-text-secondary font-medium text-center">
             Upcoming Summer Intern at Mastercard
           </span>
         </motion.div>
@@ -111,7 +111,7 @@ const Hero = ({ data, highlights }) => {
         {/* Title */}
         <motion.h2
           variants={itemVariants}
-          className="text-2xl md:text-3xl text-text-secondary mb-4 font-medium"
+          className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-text-secondary mb-4 font-medium px-2"
         >
           {data.title}
         </motion.h2>
@@ -119,7 +119,7 @@ const Hero = ({ data, highlights }) => {
         {/* Tagline */}
         <motion.p
           variants={itemVariants}
-          className="text-lg md:text-xl text-text-muted mb-8 max-w-2xl mx-auto italic"
+          className="text-base sm:text-lg md:text-xl text-text-muted mb-8 max-w-2xl mx-auto italic px-2 leading-relaxed"
         >
           "{data.tagline}"
         </motion.p>
@@ -127,23 +127,26 @@ const Hero = ({ data, highlights }) => {
         {/* Updated Tags */}
         <motion.div
           variants={itemVariants}
-          className="flex flex-wrap justify-center gap-3 mb-8"
+          className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 px-2"
         >
           <motion.span
             whileHover={{ scale: 1.05 }}
-            className="px-4 py-2 bg-dark-card border border-dark-border rounded-full text-sm font-medium text-text-secondary hover:text-accent-cyan transition-colors duration-300"
+            whileTap={{ scale: 0.95 }}
+            className="px-3 sm:px-4 py-2 bg-dark-card border border-dark-border rounded-full text-xs sm:text-sm font-medium text-text-secondary hover:text-accent-cyan transition-colors duration-300 cursor-default"
           >
             Java
           </motion.span>
           <motion.span
             whileHover={{ scale: 1.05 }}
-            className="px-4 py-2 bg-dark-card border border-dark-border rounded-full text-sm font-medium text-text-secondary hover:text-accent-cyan transition-colors duration-300"
+            whileTap={{ scale: 0.95 }}
+            className="px-3 sm:px-4 py-2 bg-dark-card border border-dark-border rounded-full text-xs sm:text-sm font-medium text-text-secondary hover:text-accent-cyan transition-colors duration-300 cursor-default"
           >
             DSA
           </motion.span>
           <motion.span
             whileHover={{ scale: 1.05 }}
-            className="px-4 py-2 bg-dark-card border border-dark-border rounded-full text-sm font-medium text-text-secondary hover:text-accent-cyan transition-colors duration-300"
+            whileTap={{ scale: 0.95 }}
+            className="px-3 sm:px-4 py-2 bg-dark-card border border-dark-border rounded-full text-xs sm:text-sm font-medium text-text-secondary hover:text-accent-cyan transition-colors duration-300 cursor-default"
           >
             Open Source Contributor
           </motion.span>
@@ -152,7 +155,7 @@ const Hero = ({ data, highlights }) => {
         {/* CTA Buttons */}
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+          className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 sm:mb-12 px-4"
         >
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -163,7 +166,7 @@ const Hero = ({ data, highlights }) => {
                 projectsSection.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="btn-primary"
+            className="w-full sm:w-auto btn-primary text-sm sm:text-base px-6 sm:px-8 py-3"
           >
             View Projects
           </motion.button>
@@ -176,7 +179,7 @@ const Hero = ({ data, highlights }) => {
                 contactSection.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="btn-secondary"
+            className="w-full sm:w-auto btn-secondary text-sm sm:text-base px-6 sm:px-8 py-3"
           >
             Let's Connect
           </motion.button>

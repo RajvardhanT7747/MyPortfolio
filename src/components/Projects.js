@@ -58,7 +58,7 @@ const Projects = ({ data }) => {
           </motion.h2>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
             {data.map((project, index) => (
               <motion.div
                 key={index}
@@ -154,7 +154,7 @@ const Projects = ({ data }) => {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex gap-3">
+                  <div className="flex flex-col sm:flex-row gap-3">
                     <motion.a
                       href={
                         index === 0 
@@ -167,7 +167,7 @@ const Projects = ({ data }) => {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-accent-cyan text-dark-bg rounded-lg font-medium hover:bg-accent-purple transition-colors duration-300"
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-accent-cyan text-dark-bg rounded-lg font-medium hover:bg-accent-purple transition-colors duration-300 text-sm sm:text-base"
                     >
                       <ExternalLink size={16} />
                       View Project
@@ -178,7 +178,7 @@ const Projects = ({ data }) => {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="px-4 py-2 border border-dark-border text-text-secondary rounded-lg hover:border-accent-purple hover:text-accent-purple transition-colors duration-300"
+                      className="flex items-center justify-center px-4 py-2.5 border border-dark-border text-text-secondary rounded-lg hover:border-accent-purple hover:text-accent-purple transition-colors duration-300 sm:w-auto"
                     >
                       <Github size={16} />
                     </motion.a>

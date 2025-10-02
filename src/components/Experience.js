@@ -51,7 +51,7 @@ const Experience = ({ data }) => {
           {/* Timeline */}
           <div className="relative max-w-4xl mx-auto">
             {/* Timeline Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent-cyan to-accent-purple" />
+            <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent-cyan to-accent-purple" />
 
             {data.map((exp, index) => (
               <motion.div
@@ -71,7 +71,7 @@ const Experience = ({ data }) => {
                       stiffness: 200
                     }
                   } : { scale: 0 }}
-                  className="absolute left-6 w-4 h-4 bg-accent-cyan rounded-full border-4 border-dark-bg z-10"
+                  className="absolute left-4 sm:left-6 w-4 h-4 bg-accent-cyan rounded-full border-4 border-dark-bg z-10"
                 />
 
                 {/* Experience Card */}
@@ -80,31 +80,31 @@ const Experience = ({ data }) => {
                     x: 10,
                     transition: { duration: 0.2 }
                   }}
-                  className="ml-16 card flex-1 group hover:shadow-lg hover:shadow-accent-cyan/20 transition-all duration-300"
+                  className="ml-12 sm:ml-16 card flex-1 group hover:shadow-lg hover:shadow-accent-cyan/20 transition-all duration-300"
                 >
                   {/* Header */}
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div>
-                      <h3 className="text-2xl font-bold text-accent-cyan group-hover:text-accent-purple transition-colors duration-300">
+                      <h3 className="text-xl sm:text-2xl font-bold text-accent-cyan group-hover:text-accent-purple transition-colors duration-300">
                         {exp.role}
                       </h3>
-                      <div className="flex items-center gap-2 text-lg text-accent-purple font-semibold">
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-base sm:text-lg text-accent-purple font-semibold">
                         <span>{exp.company}</span>
-                        <span className="text-text-muted">•</span>
-                        <span className="flex items-center gap-1 text-text-muted">
-                          <MapPin size={16} />
+                        <span className="hidden sm:inline text-text-muted">•</span>
+                        <span className="flex items-center gap-1 text-text-muted text-sm sm:text-base">
+                          <MapPin size={14} className="sm:w-4 sm:h-4" />
                           {exp.location}
                         </span>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2 text-text-muted mt-2 md:mt-0">
-                      <Calendar size={16} />
+                    <div className="flex items-center gap-2 text-text-muted mt-2 md:mt-0 text-sm sm:text-base">
+                      <Calendar size={14} className="sm:w-4 sm:h-4" />
                       <span>{exp.duration}</span>
                     </div>
                   </div>
 
                   {/* Description */}
-                  <p className="text-text-secondary text-lg mb-4 leading-relaxed">
+                  <p className="text-text-secondary text-base sm:text-lg mb-4 leading-relaxed">
                     {exp.description}
                   </p>
 
@@ -186,7 +186,7 @@ const Experience = ({ data }) => {
                     stiffness: 200
                   }
                 } : { scale: 0 }}
-                className="absolute left-6 w-4 h-4 bg-accent-purple rounded-full border-4 border-dark-bg z-10"
+                className="absolute left-4 sm:left-6 w-4 h-4 bg-accent-purple rounded-full border-4 border-dark-bg z-10"
               />
 
               {/* Future Card */}
@@ -195,28 +195,28 @@ const Experience = ({ data }) => {
                   x: 10,
                   transition: { duration: 0.2 }
                 }}
-                className="ml-16 card flex-1 group hover:shadow-lg hover:shadow-accent-purple/20 transition-all duration-300"
+                className="ml-12 sm:ml-16 card flex-1 group hover:shadow-lg hover:shadow-accent-purple/20 transition-all duration-300"
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
-                    <h3 className="text-2xl font-bold text-accent-purple group-hover:text-accent-cyan transition-colors duration-300">
+                    <h3 className="text-xl sm:text-2xl font-bold text-accent-purple group-hover:text-accent-cyan transition-colors duration-300">
                       Summer Intern
                     </h3>
-                    <div className="flex items-center gap-2 text-lg text-accent-cyan font-semibold">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-base sm:text-lg text-accent-cyan font-semibold">
                       <span>Mastercard</span>
-                      <span className="text-text-muted">•</span>
-                      <span className="flex items-center gap-1 text-text-muted">
-                        <MapPin size={16} />
+                      <span className="hidden sm:inline text-text-muted">•</span>
+                      <span className="flex items-center gap-1 text-text-muted text-sm sm:text-base">
+                        <MapPin size={14} className="sm:w-4 sm:h-4" />
                         Pune, Maharashtra
                       </span>
                     </div>
                   </div>
-                  <div className="flex items-center gap-2 text-text-muted mt-2 md:mt-0">
-                    <Calendar size={16} />
+                  <div className="flex items-center gap-2 text-text-muted mt-2 md:mt-0 text-sm sm:text-base">
+                    <Calendar size={14} className="sm:w-4 sm:h-4" />
                     <span>Summer 2026</span>
                   </div>
                 </div>
-                <p className="text-text-secondary text-lg leading-relaxed">
+                <p className="text-text-secondary text-base sm:text-lg leading-relaxed">
                   Selected as a finalist for Mastercard CFC 2.0 program. Excited to contribute to 
                   innovative financial technology solutions and learn from industry experts.
                 </p>

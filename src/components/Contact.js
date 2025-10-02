@@ -102,20 +102,21 @@ const Contact = ({ personal, social }) => {
           {/* Contact Content */}
           <motion.div
             variants={itemVariants}
-            className="text-center max-w-4xl mx-auto mb-12"
+            className="text-center max-w-4xl mx-auto mb-8 sm:mb-12"
           >
-            <p className="text-xl text-text-secondary mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-text-secondary mb-6 sm:mb-8 leading-relaxed px-2">
               Whether you're looking for a backend developer who obsesses over performance metrics, 
               a problem solver who thinks in algorithms, or a collaborator who brings ideas to life—I'd love to connect!
             </p>
             
             <motion.div
               whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className="inline-block"
             >
               <a
                 href={`mailto:${personal.email}`}
-                className="btn-primary text-lg px-8 py-4"
+                className="btn-primary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4"
               >
                 Get In Touch
               </a>
@@ -125,7 +126,7 @@ const Contact = ({ personal, social }) => {
           {/* Contact Methods */}
           <motion.div
             variants={itemVariants}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12"
           >
             {contactMethods.slice(0, 2).map((method, index) => (
               <motion.a
@@ -136,15 +137,16 @@ const Contact = ({ personal, social }) => {
                   y: -5,
                   transition: { duration: 0.2 }
                 }}
+                whileTap={{ scale: 0.98 }}
                 className="card text-center group hover:shadow-lg hover:shadow-accent-cyan/20 transition-all duration-300"
               >
-                <div className={`${method.color} mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`${method.color} mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300 flex justify-center`}>
                   {method.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-text-primary mb-2 group-hover:text-accent-cyan transition-colors duration-300">
+                <h3 className="text-base sm:text-lg font-semibold text-text-primary mb-2 group-hover:text-accent-cyan transition-colors duration-300">
                   {method.label}
                 </h3>
-                <p className="text-text-secondary">
+                <p className="text-sm sm:text-base text-text-secondary break-all">
                   {method.value}
                 </p>
               </motion.a>
@@ -156,10 +158,10 @@ const Contact = ({ personal, social }) => {
             variants={itemVariants}
             className="text-center"
           >
-            <h3 className="text-2xl font-semibold text-accent-cyan mb-6">
+            <h3 className="text-xl sm:text-2xl font-semibold text-accent-cyan mb-4 sm:mb-6">
               Connect With Me
             </h3>
-            <div className="flex justify-center gap-4 flex-wrap">
+            <div className="flex justify-center gap-3 sm:gap-4 flex-wrap">
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={index}
@@ -173,7 +175,8 @@ const Contact = ({ personal, social }) => {
                     transition: { duration: 0.2 }
                   }}
                   whileTap={{ scale: 0.95 }}
-                  className={`w-14 h-14 bg-dark-card border border-dark-border rounded-full flex items-center justify-center text-text-secondary ${social.color} hover:border-accent-cyan transition-all duration-300 group`}
+                  className={`w-12 h-12 sm:w-14 sm:h-14 bg-dark-card border border-dark-border rounded-full flex items-center justify-center text-text-secondary ${social.color} hover:border-accent-cyan transition-all duration-300 group`}
+                  aria-label={social.label}
                 >
                   <div className="group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
                     {social.icon}
@@ -186,22 +189,22 @@ const Contact = ({ personal, social }) => {
           {/* Call to Action */}
           <motion.div
             variants={itemVariants}
-            className="mt-16 text-center"
+            className="mt-12 sm:mt-16 text-center"
           >
             <div className="card max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold text-accent-purple mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-accent-purple mb-3 sm:mb-4">
                 Ready to Collaborate?
               </h3>
-              <p className="text-text-secondary mb-6">
+              <p className="text-sm sm:text-base text-text-secondary mb-4 sm:mb-6 leading-relaxed">
                 I'm always excited to work on new projects, contribute to open source, 
                 or discuss innovative ideas. Let's create something amazing together!
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                 <motion.a
                   href={`mailto:${personal.email}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="btn-primary"
+                  className="btn-primary text-sm sm:text-base px-6 py-3"
                 >
                   Send Email
                 </motion.a>
@@ -211,7 +214,7 @@ const Contact = ({ personal, social }) => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="btn-secondary"
+                  className="btn-secondary text-sm sm:text-base px-6 py-3"
                 >
                   Connect on LinkedIn
                 </motion.a>
