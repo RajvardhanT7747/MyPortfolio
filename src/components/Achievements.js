@@ -52,7 +52,7 @@ const Achievements = ({ achievements, leadership }) => {
   };
 
   return (
-    <section id="achievements" className="section-padding">
+    <section className="section-padding">
       <div className="container-max">
         <motion.div
           ref={ref}

@@ -36,7 +36,7 @@ const Skills = ({ data }) => {
   }));
 
   return (
-    <section id="skills" className="section-padding bg-dark-card/30">
+    <section className="section-padding bg-dark-card/30">
       <div className="container-max">
         <motion.div
           ref={ref}

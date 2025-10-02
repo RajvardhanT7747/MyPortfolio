@@ -83,7 +83,7 @@ const Contact = ({ personal, social }) => {
   ];
 
   return (
-    <section id="contact" className="section-padding bg-dark-card/30">
+    <section className="section-padding bg-dark-card/30">
       <div className="container-max">
         <motion.div
           ref={ref}

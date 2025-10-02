@@ -31,7 +31,7 @@ const About = ({ data }) => {
   };
 
   return (
-    <section id="about" className="section-padding">
+    <section className="section-padding">
       <div className="container-max">
         <motion.div
           ref={ref}

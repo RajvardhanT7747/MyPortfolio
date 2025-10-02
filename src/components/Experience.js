@@ -32,7 +32,7 @@ const Experience = ({ data }) => {
   };
 
   return (
-    <section id="experience" className="section-padding">
+    <section className="section-padding">
       <div className="container-max">
         <motion.div
           ref={ref}

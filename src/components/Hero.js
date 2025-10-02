@@ -34,7 +34,7 @@ const Hero = ({ data, highlights }) => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 gradient-bg" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-accent-cyan/20 to-transparent rounded-full blur-3xl" />
