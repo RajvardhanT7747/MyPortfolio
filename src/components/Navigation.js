@@ -29,6 +29,9 @@ const Navigation = ({ data }) => {
     // Close mobile menu first
     setIsMobileMenuOpen(false);
     
+    // Add transition effect to body
+    document.body.style.transition = 'all 0.3s ease-out';
+    
     // Add a small delay to ensure menu closes before scrolling
     setTimeout(() => {
       const element = document.querySelector(href);
@@ -41,10 +44,33 @@ const Navigation = ({ data }) => {
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - navbarHeight - 20;
         
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
+        // Enhanced smooth scrolling with easing
+        const startPosition = window.pageYOffset;
+        const distance = offsetPosition - startPosition;
+        const duration = Math.min(Math.abs(distance) / 2, 1000); // Dynamic duration based on distance
+        let start = null;
+        
+        const smoothScroll = (timestamp) => {
+          if (!start) start = timestamp;
+          const progress = timestamp - start;
+          const percentage = Math.min(progress / duration, 1);
+          
+          // Easing function for smooth acceleration/deceleration
+          const easeInOutCubic = percentage < 0.5 
+            ? 4 * percentage * percentage * percentage 
+            : 1 - Math.pow(-2 * percentage + 2, 3) / 2;
+          
+          window.scrollTo(0, startPosition + distance * easeInOutCubic);
+          
+          if (progress < duration) {
+            requestAnimationFrame(smoothScroll);
+          } else {
+            // Reset body transition
+            document.body.style.transition = '';
+          }
+        };
+        
+        requestAnimationFrame(smoothScroll);
       }
     }, 300); // Wait for menu animation to complete
   };
@@ -81,7 +107,7 @@ const Navigation = ({ data }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 onClick={() => scrollToSection(item.href)}
-                className="text-text-secondary hover:text-accent-cyan transition-colors duration-300 font-medium text-sm lg:text-base px-2 py-1 rounded-md hover:bg-dark-card/50"
+                className="text-text-secondary hover:text-accent-cyan nav-transition font-medium text-sm lg:text-base px-2 py-1 rounded-md hover:bg-dark-card/50"
               >
                 {item.name}
               </motion.button>

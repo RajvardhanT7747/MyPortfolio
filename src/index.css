@@ -208,4 +208,63 @@
       var(--section-color-end, transparent) 100%);
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  /* Page Transition Effects */
+  .page-transition-enter {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+
+  .page-transition-enter-active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .page-transition-exit {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  .page-transition-exit-active {
+    opacity: 0;
+    transform: translateY(-30px) scale(1.05);
+    transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  }
+
+  /* Enhanced scroll behavior */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+  }
+
+  /* Smooth section transitions with enhanced easing */
+  .section-transition {
+    position: relative;
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform, opacity;
+  }
+
+  /* 3D Transform support */
+  .preserve-3d {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+
+  /* Stagger animation delays */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+
+  /* Enhanced hover effects for navigation */
+  .nav-transition {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .nav-transition:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 4px 8px rgba(34, 211, 238, 0.3);
+  }
 }
